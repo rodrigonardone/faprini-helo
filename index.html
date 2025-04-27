@@ -17,36 +17,44 @@
         }
         .button {
             position: absolute;
-            background: transparent; /* Botão transparente */
-            border: none; /* Sem borda para manter o estilo invisível */
+            background: rgba(255, 255, 255, 0.7); /* Fundo visível para testes */
+            border: none;
             cursor: pointer;
             text-align: center;
-            line-height: 54px; /* Centraliza o texto verticalmente */
+            line-height: 50px; /* Centraliza o texto verticalmente */
             font-size: 18px; /* Tamanho do texto */
             border-radius: 5px; /* Bordas arredondadas */
         }
         .confirm-button {
-            top: 79%; /* Posição ajustada para mobile */
+            top: 75%; /* Posição original para desktop */
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 72%; /* Largura reduzida */
-            height: 54px; /* Altura reduzida */
+            width: 200px; /* Largura do botão */
+            height: 50px; /* Altura do botão */
         }
         .gifts-button {
-            top: 89%; /* Posição ajustada para mobile */
+            top: 85%; /* Posição original para desktop */
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 72%; /* Largura reduzida */
-            height: 54px; /* Altura reduzida */
+            width: 200px; /* Largura do botão */
+            height: 50px; /* Altura do botão */
         }
         @media (max-width: 600px) {
             body {
                 background: url('imagem1mobile.jpg') no-repeat center center; /* Para mobile */
                 background-size: cover;
             }
-            .confirm-button,
+            .confirm-button {
+                top: 90%; /* Ajustado para mobile */
+                width: 80%; /* Largura maior */
+                height: 60px; /* Altura maior */
+                color: black; /* Cor do texto */
+            }
             .gifts-button {
-                color: transparent; /* Texto invisível */
+                top: 100%; /* Ajustado para mobile */
+                width: 80%; /* Largura maior */
+                height: 60px; /* Altura maior */
+                color: black; /* Cor do texto */
             }
         }
     </style>
