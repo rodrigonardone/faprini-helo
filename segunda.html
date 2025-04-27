@@ -31,7 +31,6 @@
             padding: 4px 8px; /* Diminuído para mobile */
             flex: 1; /* Faz os botões ocuparem a mesma largura */
             margin: 0 10px; /* Espaçamento entre os botões */
-            width: 20%; /* Largura reduzida para 20% da largura da página */
             font-size: 16px; /* Ajuste de tamanho da fonte */
         }
         @media (max-width: 600px) {
@@ -51,9 +50,9 @@
                 margin-top: 60%; /* Desloca os botões para baixo em 60% */
             }
             .copy-button {
-                margin: 20% 0; /* Espaçamento vertical de 20% entre os botões */
-                width: 80%; /* Largura ajustada para ocupar 80% da largura da tela */
-                height: 60px; /* Aumenta a altura dos botões */
+                margin: 17% 0; /* Espaçamento vertical de 17% entre os botões (3% a mais no primeiro botão) */
+                width: 25%; /* Largura reduzida para 25% da largura da página */
+                height: 60px; /* Altura dos botões */
             }
         }
     </style>
@@ -61,7 +60,7 @@
 <body>
 
     <div class="button-container">
-        <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+5519997791636520400005303986540560.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQPKKK1113FEP6HKKVNP7K6304FD20')">Copiar Código PIX</button>
+        <button class="copy-button" style="margin-top: 3%;" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+5519997791636520400005303986540560.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQPKKK1113FEP6HKKVNP7K6304FD20')">Copiar Código PIX</button>
         <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+55199977916365204000053039865406100.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQQ7MSHNPWQJHW4TCM0NQ463042D87')">Copiar Código PIX</button>
         <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+55199977916365204000053039865406150.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQGSZA2W2XQ69GMB0V29A66304DEE5')">Copiar Código PIX</button>
         <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+55199977916365204000053039865406200.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQXJ59Z2C8D32X26BJ3CS26304F815')">Copiar Código PIX</button>
