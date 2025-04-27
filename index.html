@@ -35,6 +35,17 @@
             width: 200px; /* Largura do botão */
             height: 50px; /* Altura do botão */
         }
+        @media (max-width: 600px) {
+            .confirm-button,
+            .gifts-button {
+                width: 80%; /* Largura do botão em mobile */
+                height: 45px; /* Ajusta a altura do botão */
+                top: auto; /* Remove o posicionamento absoluto */
+                left: 50%; /* Centraliza horizontalmente */
+                transform: translate(-50%, -40%); /* Ajusta o deslocamento */
+                margin: 10px 0; /* Adiciona margem vertical */
+            }
+        }
     </style>
 </head>
 <body>
