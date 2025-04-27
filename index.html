@@ -17,38 +17,36 @@
         }
         .button {
             position: absolute;
-            background: rgba(255, 255, 255, 0.7); /* Fundo visível para testes */
-            border: none;
+            background: transparent; /* Botão transparente */
+            border: none; /* Sem borda para manter o estilo invisível */
             cursor: pointer;
             text-align: center;
-            line-height: 50px; /* Centraliza o texto verticalmente */
+            line-height: 54px; /* Centraliza o texto verticalmente */
             font-size: 18px; /* Tamanho do texto */
             border-radius: 5px; /* Bordas arredondadas */
         }
         .confirm-button {
-            top: 79%; /* Ajustado para subir mais 3% */
+            top: 79%; /* Posição ajustada para mobile */
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 72%; /* Reduzido em 10% */
-            height: 54px; /* Reduzido em 10% */
+            width: 72%; /* Largura reduzida */
+            height: 54px; /* Altura reduzida */
         }
         .gifts-button {
-            top: 89%; /* Ajustado para subir mais 3% */
+            top: 89%; /* Posição ajustada para mobile */
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 72%; /* Reduzido em 10% */
-            height: 54px; /* Reduzido em 10% */
+            width: 72%; /* Largura reduzida */
+            height: 54px; /* Altura reduzida */
         }
         @media (max-width: 600px) {
             body {
                 background: url('imagem1mobile.jpg') no-repeat center center; /* Para mobile */
                 background-size: cover;
             }
-            .confirm-button {
-                color: black; /* Cor do texto */
-            }
+            .confirm-button,
             .gifts-button {
-                color: black; /* Cor do texto */
+                color: transparent; /* Texto invisível */
             }
         }
     </style>
