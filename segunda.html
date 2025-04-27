@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('image2.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Alinha os botões na parte inferior */
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-around; /* Distribui os botões uniformemente */
+            width: 100%;
+            padding: 20px 0; /* Adiciona espaço ao redor dos botões */
+            background: rgba(255, 255, 255, 0.8); /* Fundo para os botões */
+        }
+        .copy-button {
+            background: #fff;
+            border: 1px solid #333;
+            cursor: pointer;
+            padding: 10px 20px;
+            flex: 1; /* Faz os botões ocuparem a mesma largura */
+            margin: 0 10px; /* Espaçamento entre os botões */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+5519997791636520400005303986540560.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQPKKK1113FEP6HKKVNP7K6304FD20')">Copiar Código 1</button>
+        <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+55199977916365204000053039865406100.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQQ7MSHNPWQJHW4TCM0NQ463042D87')">Copiar Código 2</button>
+        <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+55199977916365204000053039865406150.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQGSZA2W2XQ69GMB0V29A66304DEE5')">Copiar Código 3</button>
+        <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+55199977916365204000053039865406200.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQXJ59Z2C8D32X26BJ3CS26304F815')">Copiar Código 4</button>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Código copiado para a área de transferência!');
+            });
+        }
+    </script>
+
+</body>
+</html>

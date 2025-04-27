@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faprini & Heloísa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('image1.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+            color: transparent; /* Torna o texto invisível */
+        }
+        .button {
+            position: absolute;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+        .confirm-button {
+            top: 75%; /* Ajuste para baixo */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px; /* Largura do botão */
+            height: 50px; /* Altura do botão */
+        }
+        .gifts-button {
+            top: 85%; /* Ajuste maior para baixo */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px; /* Largura do botão */
+            height: 50px; /* Altura do botão */
+        }
+    </style>
+</head>
+<body>
+
+    <button class="button confirm-button" onclick="redirectToPresence()"></button>
+    <button class="button gifts-button" onclick="redirectToGifts()"></button>
+
+    <script>
+        function redirectToPresence() {
+            window.location.href = 'https://w.app/teixg0';
+        }
+
+        function redirectToGifts() {
+            window.location.href = 'segunda.html';
+        }
+    </script>
+
+</body>
+</html>
