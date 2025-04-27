@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('image2.jpg') no-repeat center center fixed;
+            background: url('image2.jpg') no-repeat center center fixed; /* Para desktop */
             background-size: cover;
             height: 100vh;
             position: relative;
@@ -19,9 +19,10 @@
         }
         .button-container {
             display: flex;
-            justify-content: space-around; /* Distribui os botões uniformemente */
+            flex-direction: column; /* Alinha os botões em coluna na versão mobile */
+            align-items: flex-start; /* Alinha os botões à esquerda */
             width: 100%;
-            padding: 20px 0; /* Adiciona espaço ao redor dos botões */
+            padding: 20px; /* Adiciona espaço ao redor dos botões */
             background: rgba(255, 255, 255, 0.8); /* Fundo para os botões */
         }
         .copy-button {
@@ -29,8 +30,18 @@
             border: 1px solid #333;
             cursor: pointer;
             padding: 10px 20px;
-            flex: 1; /* Faz os botões ocuparem a mesma largura */
-            margin: 0 10px; /* Espaçamento entre os botões */
+            width: 100%; /* Faz os botões ocuparem toda a largura disponível */
+            margin: 10px 0; /* Espaçamento entre os botões */
+        }
+        @media (max-width: 600px) {
+            body {
+                background: url('imagem2mobile.jpg') no-repeat center center fixed; /* Para mobile */
+                background-size: cover;
+                justify-content: flex-start; /* Mantém os botões no topo */
+            }
+            .button-container {
+                background: rgba(255, 255, 255, 0.9); /* Fundo mais opaco para melhor legibilidade */
+            }
         }
     </style>
 </head>
