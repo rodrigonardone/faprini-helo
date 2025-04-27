@@ -10,32 +10,39 @@
             margin: 0;
             padding: 0;
             background: url('image1.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-size: cover; /* Garante que a imagem cubra toda a tela */
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center; /* Centraliza verticalmente */
             align-items: center; /* Centraliza horizontalmente */
+            position: relative; /* Para posicionamento dos botões */
         }
         .button {
-            background: rgba(255, 255, 255, 0.5); /* Fundo visível para testes */
-            border: none;
+            background: transparent; /* Botão transparente */
+            border: 2px solid rgba(255, 255, 255, 0.7); /* Borda visível */
             cursor: pointer;
-            width: 80%; /* Largura do botão */
+            width: 200px; /* Largura do botão */
             height: 60px; /* Altura do botão */
             margin: 10px 0; /* Espaçamento entre botões */
             border-radius: 5px; /* Bordas arredondadas */
             transition: background 0.3s;
         }
         .button:hover {
-            background: rgba(255, 255, 255, 0.8); /* Efeito hover */
+            background: rgba(255, 255, 255, 0.5); /* Efeito hover */
+        }
+        @media (max-width: 600px) {
+            .button {
+                width: 80%; /* Largura maior em mobile */
+                height: 60px; /* Altura do botão */
+            }
         }
     </style>
 </head>
 <body>
 
-    <button class="button" onclick="redirectToPresence()">Confirmar Presença</button>
-    <button class="button" onclick="redirectToGifts()">Lista de Presentes</button>
+    <button class="button confirm-button" onclick="redirectToPresence()"></button>
+    <button class="button gifts-button" onclick="redirectToGifts()"></button>
 
     <script>
         function redirectToPresence() {
