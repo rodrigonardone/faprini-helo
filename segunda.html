@@ -28,9 +28,10 @@
             background: #fff;
             border: 1px solid #333;
             cursor: pointer;
-            padding: 10px 20px;
+            padding: 4px 8px; /* Diminuído para mobile */
             flex: 1; /* Faz os botões ocuparem a mesma largura */
             margin: 0 10px; /* Espaçamento entre os botões */
+            width: 60%; /* Largura reduzida para mobile */
         }
         @media (max-width: 600px) {
             body {
@@ -45,15 +46,11 @@
                 width: 100%;
                 padding: 0 20px; /* Adiciona espaço ao redor dos botões */
                 background: rgba(255, 255, 255, 0.9); /* Fundo mais opaco para melhor legibilidade */
+                margin-top: 20%; /* Desloca os botões para baixo em 20% */
             }
             .copy-button {
-                background: #fff;
-                border: 1px solid #333;
-                cursor: pointer;
-                padding: 4px 8px; /* Diminuído para mobile (60% menor) */
-                width: 80%; /* Largura reduzida */
                 margin: 10px 0; /* Espaçamento entre os botões */
-                transform: translateY(20%); /* Abaixo 20% */
+                width: 80%; /* Largura reduzida ainda mais */
             }
         }
     </style>
@@ -61,7 +58,7 @@
 <body>
 
     <div class="button-container">
-        <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+5519997791636520400005303986540560.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQPKKK1113FEP6HKKVNP7K6304FD20')">Copiar Código 11</button>
+        <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+5519997791636520400005303986540560.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQPKKK1113FEP6HKKVNP7K6304FD20')">Copiar Código 1</button>
         <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+55199977916365204000053039865406100.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQQ7MSHNPWQJHW4TCM0NQ463042D87')">Copiar Código 2</button>
         <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+55199977916365204000053039865406150.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQGSZA2W2XQ69GMB0V29A66304DEE5')">Copiar Código 3</button>
         <button class="copy-button" onclick="copyToClipboard('00020101021126360014br.gov.bcb.pix0114+55199977916365204000053039865406200.005802BR5923HELOISA HELENA DE SANTI6009SAO PAULO622905251JSSQXJ59Z2C8D32X26BJ3CS26304F815')">Copiar Código 4</button>
