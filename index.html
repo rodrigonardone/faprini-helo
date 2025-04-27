@@ -6,31 +6,57 @@
     <title>Faprini & Heloísa</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('image1.jpg') no-repeat center center; /* Sem fixed */
-            background-size: cover; /* Garante que a imagem cubra toda a tela */
+            background: url('image1.jpg') no-repeat center center fixed; /* Para desktop */
+            background-size: cover;
             height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end; /* Coloca os botões na parte inferior */
-            align-items: center;
+            position: relative;
+            color: transparent; /* Torna o texto invisível */
         }
         .button {
-            background: transparent; /* Botão transparente */
-            border: 2px solid rgba(255, 255, 255, 0.7); /* Borda visível */
+            position: absolute;
+            background: transparent;
+            border: none;
             cursor: pointer;
-            width: 80%; /* Largura do botão em mobile */
-            height: 60px; /* Altura do botão */
-            margin: 10px 0; /* Espaçamento entre botões */
-            border-radius: 5px; /* Bordas arredondadas */
+        }
+        .confirm-button {
+            top: 75%; /* Ajuste para baixo */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px; /* Largura do botão */
+            height: 50px; /* Altura do botão */
+        }
+        .gifts-button {
+            top: 85%; /* Ajuste maior para baixo */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px; /* Largura do botão */
+            height: 50px; /* Altura do botão */
+        }
+        @media (max-width: 600px) {
+            body {
+                background: url('imagem1mobile.jpg') no-repeat center center; /* Para mobile */
+                background-size: cover;
+            }
+            .confirm-button {
+                top: 70%; /* Ajuste para mobile */
+                width: 80%; /* Largura maior */
+                height: 60px; /* Altura maior */
+            }
+            .gifts-button {
+                top: 80%; /* Ajuste para mobile */
+                width: 80%; /* Largura maior */
+                height: 60px; /* Altura maior */
+            }
         }
     </style>
 </head>
 <body>
 
-    <button class="button" onclick="redirectToPresence()"></button>
-    <button class="button" onclick="redirectToGifts()"></button>
+    <button class="button confirm-button" onclick="redirectToPresence()"></button>
+    <button class="button gifts-button" onclick="redirectToGifts()"></button>
 
     <script>
         function redirectToPresence() {
