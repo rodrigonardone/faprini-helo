@@ -19,10 +19,9 @@
         }
         .button-container {
             display: flex;
-            flex-direction: column; /* Alinha os botões em coluna na versão mobile */
-            align-items: flex-start; /* Alinha os botões à esquerda */
+            justify-content: space-around; /* Distribui os botões uniformemente na versão web */
             width: 100%;
-            padding: 20px; /* Adiciona espaço ao redor dos botões */
+            padding: 20px 0; /* Adiciona espaço ao redor dos botões */
             background: rgba(255, 255, 255, 0.8); /* Fundo para os botões */
         }
         .copy-button {
@@ -30,8 +29,8 @@
             border: 1px solid #333;
             cursor: pointer;
             padding: 10px 20px;
-            width: 100%; /* Faz os botões ocuparem toda a largura disponível */
-            margin: 10px 0; /* Espaçamento entre os botões */
+            flex: 1; /* Faz os botões ocuparem a mesma largura */
+            margin: 0 10px; /* Espaçamento entre os botões */
         }
         @media (max-width: 600px) {
             body {
@@ -40,7 +39,20 @@
                 justify-content: flex-start; /* Mantém os botões no topo */
             }
             .button-container {
+                display: flex;
+                flex-direction: column; /* Alinha os botões em coluna na versão mobile */
+                align-items: flex-end; /* Alinha os botões à direita */
+                width: 100%;
+                padding: 20px; /* Adiciona espaço ao redor dos botões */
                 background: rgba(255, 255, 255, 0.9); /* Fundo mais opaco para melhor legibilidade */
+            }
+            .copy-button {
+                background: #fff;
+                border: 1px solid #333;
+                cursor: pointer;
+                padding: 5px 10px; /* Diminuído para mobile */
+                width: 80%; /* Largura reduzida */
+                margin: 10px 0; /* Espaçamento entre os botões */
             }
         }
     </style>
