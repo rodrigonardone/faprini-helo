@@ -17,8 +17,8 @@
         }
         .button {
             position: absolute;
-            background: rgba(255, 255, 255, 0.7); /* Fundo visível para testes */
-            border: none;
+            background: transparent; /* Fundo invisível */
+            border: none; /* Sem borda para invisibilidade */
             cursor: pointer;
             text-align: center;
             line-height: 50px; /* Centraliza o texto verticalmente */
@@ -31,6 +31,7 @@
             transform: translate(-50%, -50%);
             width: 200px; /* Largura do botão */
             height: 50px; /* Altura do botão */
+            color: transparent; /* Torna o texto invisível na versão web */
         }
         .gifts-button {
             top: 85%; /* Posição original para desktop */
@@ -38,6 +39,7 @@
             transform: translate(-50%, -50%);
             width: 200px; /* Largura do botão */
             height: 50px; /* Altura do botão */
+            color: transparent; /* Torna o texto invisível na versão web */
         }
         @media (max-width: 600px) {
             body {
@@ -45,16 +47,16 @@
                 background-size: cover;
             }
             .confirm-button {
-                top: 82%; /* Ajustado para subir 8% */
-                width: 80%; /* Largura maior */
+                top: 87%; /* Ajustado para subir 5% */
+                width: 64%; /* Largura reduzida em 20% */
                 height: 60px; /* Altura maior */
-                color: black; /* Cor do texto */
+                color: transparent; /* Texto invisível na mobile */
             }
             .gifts-button {
-                top: 92%; /* Ajustado para subir 8% */
-                width: 80%; /* Largura maior */
+                top: 97%; /* Ajustado para subir 5% */
+                width: 64%; /* Largura reduzida em 20% */
                 height: 60px; /* Altura maior */
-                color: black; /* Cor do texto */
+                color: transparent; /* Texto invisível na mobile */
             }
         }
     </style>
