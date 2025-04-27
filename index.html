@@ -13,13 +13,17 @@
             background-size: cover;
             height: 100vh;
             position: relative;
-            color: transparent; /* Torna o texto invisível */
+            color: transparent; /* Torna o texto invisível na versão desktop */
         }
         .button {
             position: absolute;
-            background: transparent;
+            background: rgba(255, 255, 255, 0.7); /* Fundo visível para testes */
             border: none;
             cursor: pointer;
+            text-align: center;
+            line-height: 50px; /* Centraliza o texto verticalmente */
+            font-size: 18px; /* Tamanho do texto */
+            border-radius: 5px; /* Bordas arredondadas */
         }
         .confirm-button {
             top: 75%; /* Posição original para desktop */
@@ -44,19 +48,21 @@
                 top: 90%; /* Ajustado para mobile */
                 width: 80%; /* Largura maior */
                 height: 60px; /* Altura maior */
+                color: black; /* Cor do texto */
             }
             .gifts-button {
                 top: 100%; /* Ajustado para mobile */
                 width: 80%; /* Largura maior */
                 height: 60px; /* Altura maior */
+                color: black; /* Cor do texto */
             }
         }
     </style>
 </head>
 <body>
 
-    <button class="button confirm-button" onclick="redirectToPresence()"></button>
-    <button class="button gifts-button" onclick="redirectToGifts()"></button>
+    <button class="button confirm-button" onclick="redirectToPresence()">Confirmar Presença</button>
+    <button class="button gifts-button" onclick="redirectToGifts()">Lista de Presentes</button>
 
     <script>
         function redirectToPresence() {
