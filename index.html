@@ -9,40 +9,29 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('image1.jpg') no-repeat center center fixed;
+            background: url('image1.jpg') no-repeat center center; /* Sem fixed */
             background-size: cover; /* Garante que a imagem cubra toda a tela */
             height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Centraliza verticalmente */
+            justify-content: space-between; /* Espaça os botões */
             align-items: center; /* Centraliza horizontalmente */
-            position: relative; /* Para posicionamento dos botões */
         }
         .button {
             background: transparent; /* Botão transparente */
             border: 2px solid rgba(255, 255, 255, 0.7); /* Borda visível */
             cursor: pointer;
-            width: 200px; /* Largura do botão */
+            width: 80%; /* Largura do botão em mobile */
             height: 60px; /* Altura do botão */
             margin: 10px 0; /* Espaçamento entre botões */
             border-radius: 5px; /* Bordas arredondadas */
-            transition: background 0.3s;
-        }
-        .button:hover {
-            background: rgba(255, 255, 255, 0.5); /* Efeito hover */
-        }
-        @media (max-width: 600px) {
-            .button {
-                width: 80%; /* Largura maior em mobile */
-                height: 60px; /* Altura do botão */
-            }
         }
     </style>
 </head>
 <body>
 
-    <button class="button confirm-button" onclick="redirectToPresence()"></button>
-    <button class="button gifts-button" onclick="redirectToGifts()"></button>
+    <button class="button" onclick="redirectToPresence()"></button>
+    <button class="button" onclick="redirectToGifts()"></button>
 
     <script>
         function redirectToPresence() {
