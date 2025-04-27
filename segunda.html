@@ -24,14 +24,15 @@
             padding: 20px 0; /* Adiciona espaço ao redor dos botões */
         }
         .copy-button {
-            background: transparent; /* Botões totalmente transparentes */
+            background: black; /* Fundo preto para os botões */
             border: none; /* Sem borda */
-            color: transparent; /* Texto transparente */
+            color: white; /* Texto branco */
             cursor: pointer;
             padding: 4px 8px; /* Diminuído para mobile */
             flex: 1; /* Faz os botões ocuparem a mesma largura */
             margin: 0 10px; /* Espaçamento entre os botões */
-            width: 20%; /* Largura reduzida para 20% da largura da página */
+            width: 64%; /* Largura reduzida em 20% para se alinhar com o estilo do index.html */
+            height: 60px; /* Altura dos botões */
             font-size: 16px; /* Ajuste de tamanho da fonte */
         }
         @media (max-width: 600px) {
@@ -46,9 +47,6 @@
             }
             .copy-button {
                 margin: 20% 0; /* Espaçamento vertical de 20% entre os botões */
-                width: 64%; /* Largura reduzida em 20% para se alinhar com o estilo do index.html */
-                height: 60px; /* Aumenta a altura dos botões */
-                color: transparent; /* Texto invisível */
             }
         }
     </style>
