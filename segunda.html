@@ -37,16 +37,18 @@
         @media (max-width: 600px) {
             body {
                 background: url('imagem2mobile.jpg') no-repeat center center; /* Para mobile */
-                background-size: contain; /* Ajusta a imagem para caber dentro da tela */
-                background-repeat: no-repeat; /* Evita repetição da imagem */
-                height: auto; /* Permite que a altura se ajuste automaticamente */
+                background-size: cover; /* Mantém a imagem cobrindo a tela */
+                height: auto; /* Permite ajuste automático da altura */
             }
             .button-container {
                 margin-top: 60%; /* Desloca os botões para baixo em 60% */
+                width: 100%; /* Certifica-se de que o container ocupa toda a largura da tela */
             }
             .copy-button {
                 margin: 20% 0; /* Espaçamento vertical de 20% entre os botões */
-                width: 25%; /* Largura reduzida para 25% da largura da página */
+                width: 64%; /* Largura reduzida em 20% para se alinhar com o estilo do index.html */
+                height: 60px; /* Aumenta a altura dos botões */
+                color: transparent; /* Texto invisível */
             }
         }
     </style>
