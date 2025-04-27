@@ -12,8 +12,7 @@
             background: url('image1.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
-            position: relative;
-            color: transparent; /* Torna o texto invisível */
+            overflow: hidden; /* Impede a rolagem */
         }
         .button {
             position: absolute;
@@ -38,7 +37,7 @@
         @media (max-width: 600px) {
             .confirm-button,
             .gifts-button {
-                width: 90%; /* Largura maior em mobile */
+                width: 80%; /* Largura maior em mobile */
                 height: 60px; /* Aumenta a altura do botão em mobile */
                 top: auto; /* Remove o posicionamento absoluto */
                 left: 50%; /* Centraliza horizontalmente */
