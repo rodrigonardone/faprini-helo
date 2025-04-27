@@ -12,45 +12,30 @@
             background: url('image1.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
-            overflow: hidden; /* Impede a rolagem */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza verticalmente */
+            align-items: center; /* Centraliza horizontalmente */
         }
         .button {
-            position: absolute;
-            background: transparent; /* Botão transparente */
+            background: rgba(255, 255, 255, 0.5); /* Fundo visível para testes */
             border: none;
             cursor: pointer;
+            width: 80%; /* Largura do botão */
+            height: 60px; /* Altura do botão */
+            margin: 10px 0; /* Espaçamento entre botões */
+            border-radius: 5px; /* Bordas arredondadas */
+            transition: background 0.3s;
         }
-        .confirm-button {
-            top: 75%; /* Ajuste para baixo */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 200px; /* Largura do botão */
-            height: 50px; /* Altura do botão */
-        }
-        .gifts-button {
-            top: 85%; /* Ajuste maior para baixo */
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 200px; /* Largura do botão */
-            height: 50px; /* Altura do botão */
-        }
-        @media (max-width: 600px) {
-            .confirm-button,
-            .gifts-button {
-                width: 80%; /* Largura maior em mobile */
-                height: 60px; /* Aumenta a altura do botão em mobile */
-                top: auto; /* Remove o posicionamento absoluto */
-                left: 50%; /* Centraliza horizontalmente */
-                transform: translate(-50%, -40%); /* Ajusta o deslocamento */
-                margin: 10px 0; /* Adiciona margem vertical */
-            }
+        .button:hover {
+            background: rgba(255, 255, 255, 0.8); /* Efeito hover */
         }
     </style>
 </head>
 <body>
 
-    <button class="button confirm-button" onclick="redirectToPresence()"></button>
-    <button class="button gifts-button" onclick="redirectToGifts()"></button>
+    <button class="button" onclick="redirectToPresence()">Confirmar Presença</button>
+    <button class="button" onclick="redirectToGifts()">Lista de Presentes</button>
 
     <script>
         function redirectToPresence() {
